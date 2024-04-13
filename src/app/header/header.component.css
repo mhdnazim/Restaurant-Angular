@@ -1,0 +1,29 @@
+span{
+    font-weight: bold;
+    font-style: italic;
+}
+
+h6{
+    margin-left: 55px;
+    font-size: 10px;
+    margin-top: -15px;
+    font-style: italic;
+
+}
+
+.navbar{
+    animation: 1s ease-out 0s 1 slideInup;
+}
+
+@keyframes slideInup {
+    0% {
+      transform: translatey(-100%);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+*{
+  overflow: hidden;
+}

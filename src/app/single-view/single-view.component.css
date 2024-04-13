@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+
+
+.img {
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+.title {
+    color: rgb(85, 35, 35);
+    font-size: 50px;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+
+span:not(.star) {
+    color: rgb(85, 35, 35);
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+
+h2,
+h1 {
+    font-family: 'Protest Revolution', sans-serif;
+}
+
+p {
+    font-family: 'Mukta', sans-serif;
+}
+
+
+button {
+    background-color: #04AA6D;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.c1 {
+    color: green;
+}
+
+.c2 {
+    color: red;
+}
+
+.c3{
+    color: rgb(255, 187, 0);
+}
