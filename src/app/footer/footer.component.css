@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+    padding-top:2rem;
+    font-weight: bolder;
+    background-color: rgb(43, 9, 9);
+    color: white;
+    animation: 1.1s ease-out 0s 1 slideInup;
+
+  }
+
+  @keyframes slideInup {
+    0% {
+      transform: translatey(100%);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+

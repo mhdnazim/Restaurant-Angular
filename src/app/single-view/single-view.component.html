@@ -1,0 +1,103 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+            <img class="img w-100" [src]="singleRest.photograph" alt="No image">
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6">
+            <h1 class="title">{{singleRest.name}}</h1>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h2 class="fw-bold">Address : {{singleRest.address}}</h2>
+                </li>
+                <li class="list-group-item">
+                    <h2>Cuisine Type : {{singleRest.cuisine_type}}</h2>
+                </li>
+                <li class="list-group-item">
+                    <h2>Neighborhood : {{singleRest.neighborhood}}</h2>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Operating
+                        Hours</button>
+                </li>
+                <li class="list-group-item">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Reviews
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div *ngFor="let i of singleRest.reviews" class="accordion-body">
+                                    <hr>
+                                    <div>
+                                        <p>{{i.comments}}</p>
+                                        <p>Rating : <span class="star" [ngClass]="i.rating>=4?'c1':i.rating>3?'c3':'c2'">{{i.rating}}<i
+                                                    class="fa-solid fa-star fa-xs"></i></span></p>
+                                        <p>Posted by <b>{{i.name}}</b> on <b>{{i.date}}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </li>
+            </ul>
+            <!-- <h5>Monday : {{singleRest.operating_hours.Monday}}</h5>
+            <h5>Tuesday : {{singleRest.operating_hours.Tuesday}}</h5>
+            <h5>Wednesday : {{singleRest.operating_hours.Wednesday}}</h5>
+            <h5>Thursday : {{singleRest.operating_hours.Thursday}}</h5>
+            <h5>Friday : {{singleRest.operating_hours.Friday}}</h5>
+            <h5>Saturday : {{singleRest.operating_hours.Saturday}}</h5>
+            <h5>Sunday : {{singleRest.operating_hours.Sunday}}</h5> -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Operating Hours</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h5><span>Monday</span> : {{singleRest.operating_hours.Monday}}</h5>
+                    </li>
+                    <li class="list-group-item">
+                        <h5><span>Tuesday</span> : {{singleRest.operating_hours.Tuesday}}</h5>
+                    </li>
+                    <li class="list-group-item">
+                        <h5><span>Wednesday</span> : {{singleRest.operating_hours.Wednesday}}</h5>
+                    </li>
+                    <li class="list-group-item">
+                        <h5><span>Thursday</span> : {{singleRest.operating_hours.Thursday}}</h5>
+                    </li>
+                    <li class="list-group-item">
+                        <h5><span>Friday</span> : {{singleRest.operating_hours.Friday}}</h5>
+                    </li>
+                    <li class="list-group-item">
+                        <h5><span>Saturday</span> : {{singleRest.operating_hours.Saturday}}</h5>
+                    </li>
+                    <li class="list-group-item">
+                        <h5><span>Sunday</span> : {{singleRest.operating_hours.Sunday}}</h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <button (click)="method1()">click 1</button>
+<button (click)="method2()">click 2</button> -->

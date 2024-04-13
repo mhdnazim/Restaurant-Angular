@@ -1,0 +1,227 @@
+Angular
+-----------------
+framework-not changable
+components -class based componets
+single page application - SPA
+contanis a single page to execute 
+component - html,css,js
+
+transpiling ts to js
+
+react - (jsx,css)
+angular - (html,css,typeScript)
+
+Typescript - super set of js
+js - dynamically typed
+
+int num
+num=10 strictly typed
+c c++ java
+
+var num = 10 - js , python
+num"hi"
+
+DOM
+real dom , virtual rom
+-angular using real dom
+
+create a new project
+ng new "name"
+
+ng s -o
+
+
+tsconfig.json  file contains typescript configurations 
+
+tsconfig.app.json contains configurations between the app and typescript
+
+package.json saves a copy of node_modules
+package-lock.json lock the version of packages and block the updated versions 
+angular.js - configuration between angular cli and the projects 
+.editorconfig - configuration between the editor and the project
+
+to install the node modules = npm i 
+
+src is the source file of the project
+
+main.ts - imports commonly used modules
+
+===================================================================
+
+Angular structure
+
+module - root modules - manage all components in root module also manage all other modules 
+	component - root component 
+
+	-new modules
+		-new components 
+component - html,css,ts,testing file 
+
+Decorators in angular
+------------------------
+
+define - @
+decorators are used to store meta datas- same structure diffrent datas
+
+
+packag - folder - set of modules
+module - files - functions and classes
+
+when modules is imported in the root module,all component under the root modules can use it.
+
+ng generate component name - ng g c demo1
+to delete a component first remove the folder of the component then remove the selectors of component that are used in other components 
+
+
+=========================================
+
+Angular Componant Lifecycle
+
+-----------------------------------------
+
+	constructor block:-  it is an inbuild method inside class
+ 	run when the application is first created,
+ 	and it is responsible for setting up the Angular environment
+	(programmer dont need to call it)
+
+
+	ngOnInit :- an abstract method of class OnInit
+	its called automatically after constructor
+
+
+	other methods we created and called 
+
+
+Data sharing in angular
+
+---------------------------
+ts        - html
+component - view
+
+	1.One way binding (htnl to ts / ts to html)
+--------------------------------
+  Data sharing posible to one direction at a time
+
+	1.1 - componant to view
+
+		1.1.1 - string interpollation {{}}
+		1.1.2 - property binding [property]="data"
+		
+
+	1.2 - view to componant
+
+		1.2.1 - event binding - for events without target value - (event)="method()"
+		1.2.2 - $event binding - for event with target value - (event with target value)="methodname($event)"
+		1.2.3 - event binding with template rendering variable(#variable)
+
+diffrence between class attribute and variable attribute
+
+class attribute entire a class all defined
+variable attribute only use a one method
+
+
+	2.Two way binding (ts to htmls also can do html to ts with same method )
+--------------------------------
+  Data sharing possible to two direction at a time
+
+
+		2.1 - ngModal - [(ngModal)]="attributeName" - need module - FormsModule - name attriute is must
+
+instance keyword
+====================
+
+
+	class Student{
+		setValues(name,roll){
+			this.name1=name
+			this.roll=roll
+			}
+
+		displayData(){
+			log(this.name1,this.roll,this.college)
+			}
+		}
+
+
+name,roll - method attributes (we need to set as instance variable to use
+		the variable in any methods of that class)
+
+college - class attribute (already a instance variable)
+
+==============================================================
+
+Angular Services
+-----------------------
+
+Any componants can access the properties (methods and attributes) of service class inside service file 
+
+1 module service - minimum 1 service file (we can create morethan 1 if needed)
+any components inside that module can access the service files 
+
+ng generate service serviceName - ng g s serviceName
+
+Dependancy Injection 
+----------------------
+
+used to access properties (methods and properties) of one class in another class
+
+constructor(access specifier variable:className)
+
+private -only can use injected class
+public - can use another classes inside that file
+
+
+
+API call
+=========
+-XMLHTTP
+-fetch
+-react - axios
+-HTTPClient - angular
+
+HTTP Client - class
+-------------------
+
+HTTP Client Module - module
+HTTP Client - class
+GET,POST,PUT,PATCH,DELETE,Headers....
+
+Asynchronous method handling 
+-------------------------------
+
+js - promise - resolve - then()
+			 - reject  - catch()
+
+
+ts - Observable - resolve - subscribe()
+				- reject  - catch()
+
+
+angular rxjs - (reactive extension for javascript)
+library used in angular to handle asynchronous codes 
+
+Angular Directives - to manipulate dom 
+------------------------------------
+
+1. component Directives - creating new componants
+2. structural Directives - ngFor, ngIf - by changing the structure of data 
+3. attribute Directives - by changing the attributes of dom - ngClass
+
+==============================================================================
+
+access params in url
+--------------------------
+
+params() - method
+ActivatedRoute - class
+
+=========================
+
+Angular Pipes
+------------------------
+
+Angular pipes are used to transform datas into another form 
+
+ng generate pipe pipeName - ng g p pipeName
+						  - ng g p foldername/pipeName
+
